@@ -1,0 +1,132 @@
+/*#container-menu {
+    font-size: 100%;
+    max-width: 1875px;
+    align-items: center;
+    position: fixed;
+    margin-right: 0;
+    padding-right: 20px;
+    background-color: #fff;
+    margin-left: 0;
+    justify-content: left;
+    flex-wrap: inherit;
+    display: flex;
+}*/
+ 
+#container-packsbark, #container-fetch, #container-profile, #container-why-dogs-love-us, #container-emojis, #container-numbers, #container-logos { /* Alla är tillagda */
+    width: 80%;
+    display: flex;
+}
+#container-packsbark {
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #f4f4f4;
+    flex-direction: row;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 13%;
+    align-items: flex-end;
+}
+
+#container-fetch {
+    text-align: left;
+    flex-direction: row;
+    padding-bottom: 40px;
+    padding-top: 7%
+}
+
+#container-profile {
+    /*height: auto; GÖR INGEN SKILLNAD*/
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+#container-why-dogs-love-us {
+    flex-direction: row;
+    padding-top: 20px;
+    /*height: auto; GÖR INGEN SKILLNAD*/
+    gap: 15px;
+    text-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+----CENTER DIVIDING LINE----
+
+#container-emojis {
+    justify-content: space-evenly;
+    padding-top: 50px;
+    max-height: 300px;
+    /*height: auto; GÖR INGEN SKILLNAD*/
+    margin: 0 auto;
+}
+
+#container-numbers {
+    padding-top: 50px;
+    /* max-height: 200px; GÖR INGEN SKILLNAD */
+    gap: 2px;
+    justify-content: center;
+}
+
+#container-logos {
+}
+
+/* --------------------------- /*
+ --- FONT SIZES --- 
+------------------------------ */
+/* font-size-108*/
+#container-free-plan, p.fetch-one, .profile-info , p.emoji, p.team-one,
+p.team-two, {
+    font-size: 108.3%;
+}
+
+/* font-size-112*/
+.nobody {
+    font-size: 112.5%;
+}
+/* font-size-160*/
+ul.two-columns, a.learn-more, nav#footer-right {
+    font-size: 116.6%;
+}
+
+/* font-size-150*/
+
+ button.barky, button.barky-menu, button.barky-packs-bark, button.barky-centred, button.barky-free, button.barky-centred, button.barky-free, p.packs-bark, p.fetch, p.fetch-one, p.kennel, p.dogeting-wiki, p.why-dogs-love-us, h4.emoji, h2.headertwo-left,  {
+    font-size: 150%;
+}
+
+/* font-size-300*/
+h1.header-one, h1.fetch, h1.fetch-one, h1.fetch-two, h1.kennel, h1.dogeting-wiki, h1.free {
+    font-size: 300%
+}
+
+/* --------------------------- /*
+/* --- FONT SIZEs --- 
+------------------------------ */
+
+/* FONT-WEIGHT BOLD*/
+button.dropbtn, button.request-demo, button.request-demo a, button.log-in, button.log-in a, p.profile-names, h4.emoji, h2.headertwo-left, .nav-headers {
+    font-weight: bold;
+}
+
+/* FONT-WEIGHT 600 */
+h1.header-one, h1.profile-qoute, h1.profile-qoute-rufus
+
+/* ------------------------------ */
+
+/* BLOCK-ELEMENTS */
+
+/* ------------------------------ */
+/* --- Containers --- */
+#container-online-kennel, #container-page-end
+
+/*--- Images (block) ---*/
+.dogworld-image, .dogeting-wiki-image, , img.barky-logo, .barkies-chart, h1.fetch-one, p.team-one, p.team-two, p.fetch, p.fetch-one, p.kennel, p.dogeting-wiki, p.why-dogs-love-us, p.dropdown-barky-home, .dropdown:hover .dropdown-content, .dropbtn-barky-two, .dropdown-content a {
+    display: block;
+}
+/* ------------------------------ */
+/*--- INLINE-BLOCK ---*/
+/* ------------------------------ */
+.emoji-column-one, .emoji-column-two, .emoji-column-three, #nav-wrapper a, nav#footer-right a, .dropdown-barky-home a:link, {
+    display: inline-block;
+}
