@@ -1,0 +1,812 @@
+@font-face {
+    font-family: 'Inter', sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap);
+}
+
+.inter-text {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+    font {
+        src: url(../Projekt/Inter.ttf)
+    }
+
+body {
+    font-size: 12px;
+    font-weight: normal;
+    color: #353535;
+/*display: flex;
+    flex-direction: column;*/
+    font-family: 'Inter', sans-serif;
+    height: auto;
+    text-decoration: none;
+    border: none;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1450px;
+    white-space: pre-line;
+}
+@media (max-width: 600px) {
+    * {
+        font-size: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1451px) {
+    .top-nav {
+        width: 238.9%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }    
+    li img {
+        margin-left: 0;
+    }
+
+    .nav-menu, .nav-menu li, .nav-menu a, .nav-menu ul, .dropdown-parent, .dropdown-parent:hover, a.header-parent, a.header-parent:hover {
+        font-size: 12px;
+    }
+    .nav-menu li ul a { 
+        width: 89.5%;
+        display: flex;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    .nav-actions {
+        width: 16%;
+        margin-right: 2%;
+        margin-left: 12%;
+        height: 36px;
+        font-size: 12px;
+    }
+}
+
+/* ---- TOP-NAV ---- */
+
+nav.top-nav {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    position: fixed;
+    flex-wrap: inherit;
+    background-color: #fff;
+    top: 0%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 1450px;
+    border-bottom: 2px solid #f4f4f4;
+}
+.nav-menu {
+    width: /*1450px*/ 600px;
+    display: inline-flex;
+    align-items: flex-start;
+    height: auto;
+    margin-left: 0%;
+    margin-right: 23%;
+}
+.nav-menu img {
+    align-self: flex-start;
+    height: 20px;
+    width: auto;
+    display: inline-flex;
+    margin: 0;
+}
+
+li.img {
+    margin-right: 2%;
+    margin-left:0;
+    list-style-type: none;
+    display: inline-flex;
+}
+/* ---- DROPDOWN PARENT ---- */
+.dropdown-parent {
+    display: inline-flex;
+    position: relative;
+    margin-top: 0;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+}
+
+a.header-parent, a.header-parent:hover {
+    display: inline-flex;
+    min-width: fit-content;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    margin: 0;
+    margin-right: 0%;
+    justify-content: center;
+    width: 92px;
+    height: auto;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dropdown-parent:hover { /* OK */
+    display: inline-flex;
+    background-color: #f4f4f4;
+    height: 20px;
+}
+/* ---- DROPOWN MENU STYLING ----*/
+.dropdown-menu { 
+    display: none;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    min-width: 100px;
+    list-style: none;
+    padding: 0;
+    margin-left: 0px;
+    margin-top: 0;
+    padding: 5px 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-menu li:hover { 
+    display: block; /*block*/
+    color: #353535;
+    min-width: fit-content;
+    padding: 0px 0px;
+    min-height: max-content;
+    margin: 0;
+    background-color: #f4f4f4;
+    border-radius: 6%;
+    /*cursor: pointer;
+    position: relative;
+    align-items: center;
+    margin: 0;
+    margin-right: 5%;
+    justify-content: left;*/
+}
+
+ul.dropdown-menu li a {
+    width: max-content;
+}
+
+.dropdown-menu a:hover {
+    color: #353535;
+    padding-right: 0px;
+    display: inline-block;
+    z-index: 10;
+}
+
+/* ---- Show dropdown on Hover --- */
+
+
+.dropdown-parent:hover > .dropdown-menu {
+    display: block;
+    color: #353535;
+    background-color: #fff;
+}
+
+/* ---- QUOTE IN THE DOWNLOAD SUB-MENU ---- */
+
+li.dropdown-quote, li.dropdown-quote:hover, p.dropdown a {
+    color: #999999;
+}
+
+p.dropdown, p.dropdown a {
+    font-size: 12px;
+    width: max-content;
+    height: 15px;
+}
+
+p.dropdown:hover {
+    height: 15px;
+}
+p.dropdown a {
+    text-decoration: underline;
+}
+
+li.dropdown-quote:hover {
+    background-color: #fff;
+}
+
+li.dropdown-quote a:hover, a.learn-more:hover {
+    background-color: #fff;
+    color: #087fe7;
+    padding: 0;
+}
+
+/* ---- NAV ACTIONS ---- */
+.nav-actions {
+    display: inline-flex;
+    gap: 5px;
+    margin-right: 0;
+}
+
+.nav-actions, .nav-actions a, .nav-actions p {
+    width: 39%;
+    height: 36px;
+    margin-right: 5%;
+    margin-left: 2%;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    font-size: 12px;
+}
+ 
+.nav-actions li, .nav-actions a, nav.actions li, a.btn {
+    width: max-content;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+}
+.nav-actions button, .nav-actions a {
+    height: 36px;
+    position: static;
+
+}   
+    /* <-- For README file:
+    The dropdown-parent class identifies the list item that triggers the dropdown.
+    The dropdown-menu class identifies the sub-menu that we will hide and show with CSS.
+    The down arrow is optional but helps indicate a dropdown.--> */
+
+/* ---- WIDTH OF THE MAIN CONTENT */
+main  {
+    width: 1000px;
+    font-family: 'inter', sans-serif;
+}
+/* --FONT SIZES-- */
+h1 {
+    font-family: 'inter', sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    width: max-content;
+    color:#050505;
+    margin-left: 0;
+}
+
+h2 {
+    width: 1000px;
+    font-size: 36px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #999999;
+}
+h2.rufus {
+    text-align: block;
+}
+
+h3 { 
+    font-size: 26px;
+    display: inline-block;
+}
+
+h4 {
+    display: inline-flex;
+}
+
+img {
+    width: auto;
+    height: 15px;
+    align-self: center;
+}
+button.one {
+    background-color: #050505;
+    color: #f4f4f4;
+    font-size: 14px;
+    width: auto;
+    border: none;
+    margin-left: 4%;
+    padding: 10px 8px;
+    border-radius: 6%;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+button.one:hover {
+    background-color: #353535;
+    color: #f4f4f4;
+}
+
+p {
+    font-size: 18px;
+    width: max-content;
+    margin: 0;
+    color: #999999;
+    font-weight: 300;
+    line-height: 25px;
+    }
+
+article {
+    display: inline-block;
+    width: 1000px;
+    }
+
+section {
+    width: 1000px;
+    display: flex;
+    height: auto;
+    justify-content: left;
+    margin: 0 auto;
+}
+#hero {
+    padding-bottom: 5%;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.hero-text {
+    width: 550px;
+    text-align: left;
+    margin: 0;
+}
+
+.hero-image {
+    display: inline-flex;
+    background-image: url(../Projekt/images/teams-hero.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto; /* IMAGE CONTAINERS */
+    height: 257px;
+    margin: 0;
+}
+/*-- DOGWORLD SECTION --*/
+#barkies {
+    justify-content: flex-start;
+    width: 1000px;
+    margin-left: 0;
+}
+article.barkies-text {
+    width: 1000px;
+}
+
+.barkies-text p {
+    width: auto;
+    height: 69px;
+}
+
+.barkies-image {
+    background-image: url("../Projekt/images/usp-01.png");
+    display: block;
+    width: auto;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+/* BRAND LOGO'S SECTION */
+
+#container-logo-one,
+#container-logo-two {
+    flex-wrap: wrap;
+    height: 90px;
+    max-width: 75%;
+    justify-content: space-between;
+    gap: 18px;
+}
+#logo-one {
+    margin-top: 1%;
+    display: block;
+}
+
+#logo-one, #logo-two {
+    height: auto;
+    width: 800px;
+    width: 95%;
+    display: flex;
+}
+#logo-two {
+    height: 27px;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+#logo-two .logo-item {
+    margin-right: 15px;
+}
+
+.logo-item {
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    margin-right: 20px;
+}
+
+
+#logo-one .logo-item:nth-child(1) {
+    background-image: url("../Projekt/images/company-logo-01.png");
+}
+
+#logo-one .logo-item:nth-child(2) {
+    background-image: url("../Projekt/images/company-logo-02.png");
+}
+
+#logo-one .logo-item:nth-child(3) {
+    background-image: url("../Projekt/images/company-logo-03.png");
+}
+
+#logo-one .logo-item:nth-child(4) {
+    background-image: url("../Projekt/images/company-logo-04.png");
+    /*max-width: 84.6%;
+    max-height: 60px;
+    align-self: center;*/
+}
+
+#logo-one .logo-item:nth-child(5) {
+    background-image: url("../Projekt/images/company-logo-05.png");
+    /*height: 60%;
+    align-self: center;
+    width: auto;*/
+}
+
+#logo-one .logo-item:nth-child(6) {
+    background-image: url("../Projekt/images/company-logo-06.png");
+    /*width: auto;
+    align-self: center;*/
+}
+
+#logo-one .logo-item:nth-child(7) {
+    background-image: url("../Projekt/images/company-logo-07.png");
+    /*height: 67%;
+    align-self: center;*/
+}
+
+#logo-two .logo-item:nth-child(1) {
+    background-image: url("../Projekt/images/company-logo-08.png");
+}
+
+#logo-two .logo-item:nth-child(2) {
+    background-image: url("../Projekt/images/company-logo-09.png");
+}
+
+#logo-two .logo-item:nth-child(3) {
+    background-image: url("../Projekt/images/company-logo-10.png");
+}
+
+#logo-two .logo-item:nth-child(4) {
+    background-image: url("../Projekt/images/company-logo-11.png");
+}
+
+#logo-two .logo-item:nth-child(5) {
+    background-image: url("../Projekt/images/company-logo-12.png");
+}
+
+#logo-two .logo-item:nth-child(6) {
+    background-image: url("../Projekt/images/company-logo-13.png");
+}
+
+
+/* ---DOGWORLD SECTION--- */
+article.dogworld-text {
+    width: 1000px;
+}
+
+#dogworld p {
+    width: auto;
+    height: 76px;
+}
+
+.dogworld-image {
+    background-image: url("../Projekt/images/usp-02.png");
+    display: block;
+    width: auto;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+/*-- TESTIMONIAL --*/
+
+#testimonial-rufus {
+    display: flex;
+}
+
+#testimonial-bella {
+    padding-bottom: 5%;
+    border-bottom: 2px solid #f4f4f4;
+    display: inline-block;
+}
+#testimonial {
+    display: block;
+    margin: 0 auto;
+}
+figure { 
+    display: inline-flex;
+    margin: 0;
+    width: 1000px;
+    height: 100px;
+    margin: 0, auto;
+    object-fit: contain;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+img.profile-pic, figcaption {
+    width: auto;
+    height: 40px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.dogeting-text p {
+    width: 512px;
+}
+.dogeting-image {
+    background-image: url("../Projekt/images/usp-03.png");
+    display: block;
+    width: auto;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+/* ---FREE-PLAN SECTION ---*/
+.free-plan-image {
+    background-image: url("../Projekt/images/usp-03.png");
+    display: block;
+    width: auto;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+#free-plan, .free-plan-text p, .free-plan-text h1 {
+    width: 1000px;
+    text-align: center;
+    margin-right: 0;
+    justify-content: center;
+}
+#free-plan {
+    padding-top: 5%;
+}
+
+/* ---CHECKLIST--- */
+
+ul.checklist {
+    display: flex;
+    flex-direction: column;
+    columns: 2;
+    width: 650px;
+    background-color: #f4f4f4;
+	color:  #7f7f7f;
+	padding: 2%;
+	margin-bottom: 5%;
+	border-radius: 4px;
+    margin: 0 auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.checklist:last-child {
+    margin-right: auto;
+}
+
+.row {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 4px 0;
+    white-space: normal;
+    list-style: none;
+    line-height: 30px;
+}
+
+.row li, li.barky { 
+    font-size: 18px;
+    font-weight: 350;
+}
+.row:last-child {
+    border-bottom: none;
+}
+li {
+    flex: 1;
+    text-align: left;
+}
+
+li img {
+    width: 6%;
+    margin-right: 0%;
+    margin-left: 94%;
+}
+li.barky {
+    color: #050505;
+    display: flex;
+    justify-content: flex-end;
+    color:  #7f7f7f;
+}
+/* --SELLING-POINTS SECTION--- */
+
+#selling-points, .selling-points-text p, .selling-points-text h1 {
+    width: 1000px;
+    text-align: center;
+    margin-right: 0 auto;
+    justify-content: center;
+}
+
+#selling-points {
+    padding-top: 5%;
+    margin-top: 5%;
+    border-top: 2px solid #f4f4f4;
+}
+
+/* ---THREE COLUMN SECTION--- */
+
+.three-columns-text {
+    width: 33.3%;
+    margin-right: 0;
+    line-height: 20px;
+}
+p.three-columns-text {
+    width: auto;
+}
+
+p.ikon, h4.three-columns {
+    display: inline-flex;
+    width: max-content;
+}
+
+a.learn-more {
+    text-decoration: underline;
+    font-weight: 500px;
+}
+
+article.column-one, article.column-two, article.column-three, p.three-columns-text, a.learn-more, p.ikon , h4.three-columns {
+    text-align: center;
+    font-size: 18px;
+}
+/* STATS SECTION */
+#stats {
+    display: block;
+}
+
+#stats h1 {
+    text-align: center;
+    margin: 0;
+    width: 1000px;
+}
+
+.stats-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 58%;
+    margin: 0;
+    justify-content: center;
+}
+
+.stats-text {
+    display: flex;
+}
+.stats-text p, .stats-text h3 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+}
+
+.stats-text p {
+    font-size: 18px;
+    display: inline-block;
+    width: 500px;
+    color: #050505;
+}
+
+.stats-text a {
+    font-size: 18px;
+    color: #050505;
+    text-decoration: underline;
+}
+
+figure.stats {
+    background-image: url(../Projekt/images/badges.png);
+    display: inline-flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 170px;
+    margin: 0;
+    width: max-content;
+    flex-wrap: wrap;
+}
+
+/* NUMBER STAT'S SECTION */
+h1.numbers {
+    color: #666666;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+p.numbers {
+    margin: 0 auto;
+}
+
+article.numbers {
+    border-right: 2px solid #f4f4f4;
+}
+/* ---SELLING-POINT SECTION [repeat previous section codes]--- */
+
+figcaption {
+    display: flex;
+    margin-left: 0;
+    align-items: center;
+    height: 100px;
+}
+/* ---FOOTER--- */
+footer {
+    display: flex;
+    width: 1350px;
+    margin: 0 auto;
+    border-top: 2px solid #f4f4f4;
+    padding-top: 2%;
+}
+.footer-brand {
+    width: 320px;
+    justify-content: left;
+    margin-left: 50px;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.footer-brand p {
+    color:#050505;
+}
+.footer-brand img {
+    margin-left: 0;
+    width: auto;
+    height: 40px;
+}
+figure.social-media-logos {
+    width: 330px;
+    justify-content: left;
+}
+figure.social-media-logos img {
+    display: inline-flex;
+    width: auto;
+    height: 28px;  
+    margin-left: 0;
+    margin-right: 3%;
+    padding: 0;
+}
+
+/* -- FOOTER LINKS -- */
+nav#footer-links {
+    width: 800px;
+    display: inline-flex;
+    margin: 0;
+}
+
+ul.footer, a {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    color: #353535;
+    font-size: 13.5px;
+    margin-right: 10px;
+}
+
+ul:last-child {
+    margin-right: 0;
+}
